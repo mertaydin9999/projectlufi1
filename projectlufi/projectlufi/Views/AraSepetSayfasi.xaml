@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projectlufi.Views.AraSepetSayfasi"
+             >
+    <ScrollView >
+        <StackLayout >
+            <Frame>
+                <Label 
+                    Margin="-5,5,0,0"
+                    Text="ÜRÜN SEPETİNİZE EKLENDİ                                     x"
+                    TextColor="#101341"
+                    FontSize="17"
+                    FontAttributes="Bold"
+                    />
+            </Frame>
+            <Frame BorderColor="Gray" HeightRequest="250">
+                <Grid HeightRequest="500">
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        
+                        
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+
+                    </Grid.ColumnDefinitions>
+                    
+                        <Label Grid.Row="0" Grid.Column="0" 
+                    Text="ÜRÜN"
+                               HorizontalOptions="Start"
+                       TextColor="#303030"
+                       FontSize="18"
+                       />
+                        <Label  Grid.Row="0" Grid.Column="1" 
+                    Text="ÜRÜN ADI"
+                                HorizontalOptions="Start"
+                       TextColor="#303030"
+                       FontSize="18"
+                       />
+                        <Label  Grid.Row="0" Grid.Column="2" 
+                        Text="TOPLAM TUTAR"
+                                HorizontalOptions="End"
+                       TextColor="#303030"
+                       FontSize="18"
+                       
+                       />
+                    
+                    
+
+                    
+                    <Image Grid.Row="1" Grid.Column="0"
+                       Source="{Binding UrunFoto}"
+                       
+                           HorizontalOptions="Start"
+                    
+                    />
+                    <Label Grid.Row="1" Grid.Column="1" 
+                    Text="{Binding UrunAd, StringFormat='{0}'}"
+                           Margin="5,30,0,0"
+                           HorizontalOptions="Center"
+                           
+                       
+                       TextColor="#303030"
+                       FontSize="17"                     
+                      />
+                    <Label Grid.Row="1" Grid.Column="1" 
+                    Text="{Binding UrunBeden}"
+                           Margin="5,30,0,0"
+                           HorizontalOptions="Center"
+                           
+                       
+                       TextColor="#303030"
+                       FontSize="17"                     
+                      />
+
+                    <Label Grid.Row="1" Grid.Column="2" 
+                    Text="{Binding UrunFiyat, StringFormat='{0} TL'}"                      
+                       TextColor="#303030"
+                           HorizontalOptions="Start"
+                       FontSize="20"         
+                           Margin="20,30,0,0"
+                       />
+
+                </Grid>
+            </Frame>
+
+            <StackLayout>
+                <Label  Margin="10,5" 
+                Text="{Binding UrunFiyat, StringFormat='Sepet Toplamı : {0}'}"
+                    TextColor="#303030"  
+                       HorizontalTextAlignment="End"
+                       FontSize="Medium"
+                       />
+            </StackLayout>
+            <StackLayout Margin="0,100">
+            <Button Margin="5,0"
+                Text="ALIŞVERİŞE DEVAM"
+                BackgroundColor="Gray"
+                TextColor="White"
+                    Clicked="AlisveriseDon"
+                />
+            <Button Margin="5,0,5,0"
+                Text="SEPETE GİT"
+                BackgroundColor="#101341"
+                TextColor="White"
+                 Clicked="SepeteGit"
+                        CommandParameter="{Binding .}"
+
+                />
+            </StackLayout>
+            
+            
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>

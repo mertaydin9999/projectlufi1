@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projectlufi.Views.UrunSayfalari.Aksesuar.CorapSayfasi">
+    <RefreshView>
+    <CollectionView ItemsSource="{Binding Urunler}"
+                    ItemTemplate="{StaticResource urunDataTemplate}"
+                    SelectionMode="Single"
+                    SelectionChanged="CollectionView_SelectionChanged"
+                   
+                   
+                    
+                    
+                    >
+        <CollectionView.ItemsLayout>
+            <GridItemsLayout Orientation="Vertical" Span="2"
+                             />
+        </CollectionView.ItemsLayout>
+    </CollectionView>
+    </RefreshView>
+</ContentPage>

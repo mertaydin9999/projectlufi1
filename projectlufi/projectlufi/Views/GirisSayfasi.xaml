@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projectlufi.Views.GirisSayfasi">
+    <Frame BorderColor="LightGray"
+           Padding="5,10,10,0"
+           Margin="10,10,10,10">
+
+        <StackLayout Padding="10, 20, 20, 20"  >
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.08*"/>
+                    <ColumnDefinition Width="0.9*"/>
+
+                </Grid.ColumnDefinitions>
+
+
+                <Image Source="girisicon.png"
+               Scale="0.5"
+               Grid.Column="0"/>
+                <Label     
+                   Text="ÜYE GİRİŞİ"                                
+                   HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                   FontSize="Medium"
+                   TextColor="#231F20"
+                   Margin="0,0,0,0"
+                    Grid.Column="1"
+                                
+                   />
+            </Grid>
+
+            <BoxView  Color="Gray"
+             HeightRequest="1"
+             HorizontalOptions="Fill"
+                      Margin="0,20,0,10"/>
+
+            <Label  
+            Text="E-Mail"
+            TextColor="#303030"
+            HorizontalOptions="Fill"
+            FontSize="Small"
+            Margin="5,10,15,0"           
+            />
+            <Entry x:Name="EmailEntry"
+            FontSize="Medium"
+            Placeholder="E-Mail"
+            FontFamily="Jost, sans-serif"           
+            />
+            <Label  
+            Text="Şifre"
+            TextColor="#303030"
+            HorizontalOptions="Fill"
+            FontSize="Small"
+            FontFamily="Jost,sans-serif"                      
+            Margin="5,10,15,0"
+            />
+            <Entry
+               x:Name="SifreEntry"
+            FontSize="Medium"
+            Placeholder="Şifre"
+            
+            />
+            <Button
+            
+            Text="  G İ R İ Ş   Y A P                      →       "
+                Clicked="GirisYap"
+            TextColor="#FFFFFF"
+            FontSize="Medium"
+            FontFamily="Jost,sans-serif"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="#101341"
+            Margin="5,10,10,0"
+             Padding="0,0,0,0"
+            />
+            <Grid Margin="0,10,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <CheckBox  Color="Black" IsChecked="True"/>
+                <Label Grid.Column="0" 
+            Text="      Beni Hatırla"
+                   TextColor="Black"
+            FontSize="Small"
+           HorizontalTextAlignment="Start"
+            Margin="10,5,0,0"
+            />
+
+                <Label Grid.Column="1" Grid.ColumnSpan="1"
+            Text="Şifemi Unuttum?"
+                   TextColor="Black"
+                   Margin="0,3,0,0"
+            FontSize="Small"
+            HorizontalTextAlignment="End"             
+                />
+            </Grid>
+
+            <Label 
+            Text="Üye Değil Misiniz?"
+            TextColor="Black"
+            FontSize="Small"
+            Margin="5,0,0,5"
+            />
+
+            <Button
+            Text="Ü Y E   O L                                   →    "
+            
+            TextColor="#FFFFFF"
+            FontSize="Medium"
+           
+            FontFamily="Jost,sans-serif"
+            HorizontalOptions="Fill"
+            BackgroundColor="#969B9f"
+            Padding="0,0,0,0"
+            Clicked="Handle_Click"
+           
+              />
+
+        </StackLayout>
+    </Frame>
+</ContentPage>

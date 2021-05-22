@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projectlufi.Views.BosSepetSayfasi">
+    <Frame>
+        <StackLayout >
+
+            <Grid Margin="0,0,0,-40">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
+
+
+                <StackLayout Grid.Row="0" Grid.Column="0"  >
+                    <ImageButton Source="lufianlogo.png" BackgroundColor="White" />
+                </StackLayout>
+
+                <StackLayout Grid.Row="0" Grid.Column="2"  >
+                    <ImageButton Source="sepeticon.png" BackgroundColor="White" />
+                </StackLayout>
+
+
+            </Grid>
+
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+
+                <StackLayout Grid.Row="0" Grid.Column="0" Scale="0.35" >
+                    <Image Source="sepeticon.png" />
+                </StackLayout>
+
+                <StackLayout Grid.Row="0" Grid.Column="1" Scale="0.35" >
+                    <Image Source="adressicon.png" />
+                </StackLayout>
+
+                <StackLayout Grid.Row="0" Grid.Column="2" Scale="0.35" >
+                    <Image Source="cardicon.png" />
+                </StackLayout>
+
+                <StackLayout Grid.Row="0" Grid.Column="3" Scale="0.35" Padding="0,35,0,0">
+                    <Image Source="tik.png" Scale="3.5"/>
+                </StackLayout>
+
+            </Grid>
+
+            <StackLayout>
+                <Image Source="sepetarabasi.png" Scale="1.4"/>
+                <Label Text="Sepetinizde Ürün Bulunmamaktadır"
+                   TextColor="#000000"
+                   FontSize="23"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="0,45,10,0"
+                   />
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</ContentPage>

@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projectlufi.Views.KayitSayfasi">
+   
+    <Frame BorderColor="LightGray"
+           Padding="5,10,10,0"
+           Margin="10,10,10,10"
+           >
+        <StackLayout Padding="20,20,20,20" >
+
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.08*"/>
+                    <ColumnDefinition Width="0.9*"/>
+
+                </Grid.ColumnDefinitions>
+
+
+                <Image Source="girisicon.png"
+               Scale="0.5"
+               Grid.Column="0"/>
+                <Label     
+                   Text="ÜYE KAYIT/DUZENLEME"                                
+                   HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                   FontSize="Medium"
+                   TextColor="#231F20"
+                   Margin="0,0,0,0"
+                    Grid.Column="1"
+                                
+                   />
+            </Grid>
+
+            <BoxView  Color="Gray"
+             HeightRequest="1"
+             HorizontalOptions="Fill"
+                      Margin="0,0,0,0"/>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.01*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label
+                Text="Ad" Grid.Column="0" Grid.Row="1"
+                TextColor="Black"
+                FontSize="Small"
+                
+                Margin="5,0,0,0"
+                />
+
+                <Label
+                Text="Soyad"
+                Grid.Column="2" Grid.Row="1"
+                FontSize="Small"
+                TextColor="Black"
+                HorizontalOptions="StartAndExpand"
+                
+                />
+
+            </Grid>
+
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Editor x:Name="AdEditor"
+                        
+                Placeholder="Ad"
+                Grid.Column="0" Grid.Row="0"
+                
+                />
+                <Editor x:Name="SoyadEditor"
+                Placeholder="Soyad"
+                Grid.Column="1" Grid.Row="0"
+                />
+            </Grid>
+
+            <Label  
+            Text="E-Mail"
+            TextColor="Black"
+            HorizontalOptions="Fill"
+            FontSize="Small"
+            Margin="5,0,0,0"           
+            />
+            <Entry x:Name="EmailEntry"
+            Placeholder="E-Mail"
+            FontFamily="Jost, sans-serif"           
+            />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label
+                Text="Şifre"
+                TextColor="Black"
+                Margin="5,0,0,0"
+                Grid.Column="0" Grid.Row="0"              
+                />
+                <Label
+                Text="Şifre Tekrar"
+                TextColor="Black"
+                Margin="2,0,0,0"
+                Grid.Column="1" Grid.Row="0"              
+                />
+
+            </Grid>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Editor x:Name="SifreEditor"
+                Placeholder="Şifre"
+                Grid.Column="0" Grid.Row="0"
+                
+                />
+                <Editor x:Name="SifreYenidenEditor"
+                Placeholder="Şifre Tekrar"
+                Grid.Column="1" Grid.Row="0"
+                />
+            </Grid>
+
+            <Button
+            Text=" K A Y D E T                                               →  "
+            TextColor="#FFFFFF"
+            FontSize="Small"
+            Clicked="Kaydet"
+            FontFamily="Jost,sans-serif"
+            CornerRadius="0"
+            BackgroundColor="#101341"
+            Margin="5,0,0,0"
+             Padding="0,0,0,0"
+           
+            />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <CheckBox Grid.Column="0" Grid.Row="0" Color="Gray" />
+                <CheckBox Grid.Column="0" Grid.Row="1" Color="Gray" />
+                <CheckBox Grid.Column="0" Grid.Row="2" Color="Gray" />
+                <CheckBox Grid.Column="0" Grid.Row="3" Color="Gray" />
+
+                <Label Text="Tarafınızdan gönderilecek bilgilendirme e-postalarını almak istiyorum."
+                   Grid.Column="1" Grid.Row="0"
+                   Margin="0,0,0,0"
+                   />
+                <Label Text="Tarafınızdan gönderilecek bilgilendirme sms'lerini almak istiyorum."
+                   Grid.Column="1" Grid.Row="1"
+                   Margin="0,0,0,0"
+                   />
+                <Label Text="Üyelik sözleşmesini Okudum, Kabul Ediyoum."
+                   Grid.Column="1" Grid.Row="2"
+                   Margin="0,9,0,0"
+                   />
+                <Label Text="KVKK sözleşmesini Okudum, Kabul Ediyorum."
+                   Margin="0,10,0,0"
+                   Grid.Column="1" Grid.Row="3"
+                   />
+
+
+            </Grid>
+
+            <Label Text="Üyeliğiniz varsa GİRİŞ yapabilirsiniz."
+               Margin="5,0,0,0"
+            />
+            
+
+        </StackLayout>
+    </Frame>
+</ContentPage>
